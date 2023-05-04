@@ -3,7 +3,7 @@ ruby '3.2.2'
 source "https://rubygems.org"
 
 gem 'multi_json'
-
+gem 'webrick'
 
 github 'sinatra/sinatra' do
   gem 'sinatra'
