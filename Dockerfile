@@ -1,4 +1,4 @@
-FROM ruby:3.2.2
+FROM ruby:3.2.2-alpine3.17
 
 ADD . /src
 WORKDIR /src
