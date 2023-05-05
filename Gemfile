@@ -4,8 +4,10 @@ source "https://rubygems.org"
 
 gem 'multi_json'
 gem 'webrick'
-gem 'sinatra'
-gem 'sinatra-contrib'
+#github 'sinatra/sinatra' do
+  gem 'sinatra'
+  gem 'sinatra-contrib'
+#end
 
 gem 'sinatra-activerecord'
 gem 'sqlite3'

@@ -34,5 +34,9 @@ class App < Sinatra::Application
     'Game'
   end
 
+  get '/' do
+    'Hello World'
+  end
+
 end
 
