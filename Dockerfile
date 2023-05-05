@@ -1,7 +1,7 @@
 FROM ruby:3.2.2-alpine3.17
 
-ADD . /src
-WORKDIR /src
+ADD . /Sinatra-Docker
+WORKDIR /Sinatra-Docker
 
 RUN bundle install
 

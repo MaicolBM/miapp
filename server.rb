@@ -34,8 +34,5 @@ class App < Sinatra::Application
     'Game'
   end
 
-  get '/' do
-    'Welcome'
-  end
 end
 
