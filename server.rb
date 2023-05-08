@@ -13,6 +13,9 @@ class App < Sinatra::Application
     super()
   end
 
+  set :root,  File.dirname('miapp')
+  set :views, Proc.new { File.join(root, 'views') }
+
   configure :production, :development do
     enable :logging
 
@@ -35,8 +38,18 @@ class App < Sinatra::Application
   end
 
   get '/' do
-    'Hello World'
+    erb :index
   end
 
+  get '/users' do
+    @users = User.all
+
+    erb :users
+  end
+
+  post '/users' do
+    @users = User.find_or_create_by(name: params[:name],pass: params[:pass])
+    erb :users
+  end
 end
 
