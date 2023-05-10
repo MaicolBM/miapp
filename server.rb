@@ -7,6 +7,7 @@ require 'sinatra/reloader' if Sinatra::Base.environment == :development
 
 
 require_relative 'models/user'
+require_relative 'model/report'
 
 class App < Sinatra::Application
   def initialize(app = nil)
@@ -43,8 +44,12 @@ class App < Sinatra::Application
 
   get '/users' do
     @users = User.all
-
     erb :users
+  end
+
+  get '/reports' do
+    @reports = Report.all
+    erb :reports
   end
 
   post '/users' do
